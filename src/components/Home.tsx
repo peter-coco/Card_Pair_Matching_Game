@@ -32,12 +32,11 @@ const MenuButtons = styled.div`
   height: 50%;
   grid-template-columns: 1fr 1fr;
 
-  & > div {
+  & div {
     width: 230px;
     height: 68px;
     background-color: #6f6a62;
     display: flex;
-    place-self: center center;
     justify-content: center;
     align-items: center;
   }
@@ -54,18 +53,18 @@ const Home = () => {
         <HomeIcon />
       </HomeIconWrap>
       <MenuButtons>
-        <MenuLogin>
-          <Link to="/login">로그인</Link>
-        </MenuLogin>
-        <MenuStartGame>
-          <Link to="/gameBoard">게임 시작</Link>
-        </MenuStartGame>
-        <MenuRoluOfGame>
-          <Link to="/ruldOfGame">게임 방법</Link>
-        </MenuRoluOfGame>
-        <MenuSetDifficulty>
-          <Link to="/setDifficulty">난이도 선택</Link>
-        </MenuSetDifficulty>
+        <Link style={{ placeSelf: "center center" }} to="/login">
+          <MenuLogin>로그인</MenuLogin>
+        </Link>
+        <Link style={{ placeSelf: "center center" }} to="/gameBoard">
+          <MenuStartGame>게임 시작</MenuStartGame>
+        </Link>
+        <Link style={{ placeSelf: "center center" }} to="/ruldOfGame">
+          <MenuRoluOfGame>게임 방법</MenuRoluOfGame>
+        </Link>
+        <Link style={{ placeSelf: "center center" }} to="/setDifficulty">
+          <MenuSetDifficulty>난이도 선택</MenuSetDifficulty>
+        </Link>
       </MenuButtons>
     </HomeWrap>
   );
