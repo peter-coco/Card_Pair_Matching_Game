@@ -3,22 +3,42 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const HomeWrap = styled.div`
-  width: 577px;
-  height: 736px;
+  width: 705px;
+  height: 100%;
 
-  padding: 30px;
+  padding: 0 15px;
   box-sizing: border-box;
+  border-left: 2px solid #000000;
+  border-right: 2px solid #000000;
 
   display: flex;
   flex-direction: column;
-  background: #ffffff;
-  /* justify-content: center; */
+  background: #fff8ee;
+  justify-content: center;
+  align-items: center;
+`;
+
+const HomeContents = styled.div`
+  width: 100%;
+  height: 100%;
+
+  padding: 20px 100px;
+  box-sizing: border-box;
+  border: 2px solid #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  background: #fff0d8;
+  justify-content: center;
   align-items: center;
 `;
 
 const HomeIconWrap = styled.div`
-  width: 50%;
-  height: 50%;
+  width: 100%;
+  height: 60%;
+  background-color: #ffffff;
+  padding: 25px;
+  box-sizing: border-box;
 `;
 
 const HomeIcon = styled.img`
@@ -27,45 +47,81 @@ const HomeIcon = styled.img`
 `;
 
 const MenuButtons = styled.div`
-  display: grid;
+  display: flex;
   width: 100%;
-  height: 50%;
-  grid-template-columns: 1fr 1fr;
-
+  height: 68px;
+  justify-content: space-between;
   & div {
-    width: 230px;
-    height: 68px;
+    width: 200px;
+    height: 50px;
     background-color: #6f6a62;
     display: flex;
     justify-content: center;
+    border-radius: 10px;
     align-items: center;
+    color: #ffffff;
+    /* text-decoration: none; */
   }
 `;
 const MenuLogin = styled.div``;
 const MenuStartGame = styled.div``;
 const MenuRoluOfGame = styled.div``;
 const MenuSetDifficulty = styled.div``;
+const MenuTitleWrap = styled.div`
+  width: 100%;
+  height: 84px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+const MenuTitle = styled.div``;
+const MenuTitleUnderBar = styled.div`
+  width: 50%;
+  height: 2px;
+  background-color: #000000;
+`;
 
 const Home = () => {
   return (
     <HomeWrap>
-      <HomeIconWrap>
-        <HomeIcon />
-      </HomeIconWrap>
-      <MenuButtons>
-        <Link style={{ placeSelf: "center center" }} to="/login">
-          <MenuLogin>로그인</MenuLogin>
-        </Link>
-        <Link style={{ placeSelf: "center center" }} to="/gameBoard">
-          <MenuStartGame>게임 시작</MenuStartGame>
-        </Link>
-        <Link style={{ placeSelf: "center center" }} to="/ruldOfGame">
-          <MenuRoluOfGame>게임 방법</MenuRoluOfGame>
-        </Link>
-        <Link style={{ placeSelf: "center center" }} to="/setDifficulty">
-          <MenuSetDifficulty>난이도 선택</MenuSetDifficulty>
-        </Link>
-      </MenuButtons>
+      <HomeContents>
+        <HomeIconWrap>
+          <HomeIcon />
+        </HomeIconWrap>
+        <MenuTitleWrap>
+          <MenuTitle>COCO MEOW</MenuTitle>
+          <MenuTitleUnderBar />
+        </MenuTitleWrap>
+        <MenuButtons>
+          <Link
+            style={{ placeSelf: "center center", textDecoration: "none" }}
+            to="/login"
+          >
+            <MenuLogin>Login</MenuLogin>
+          </Link>
+          <Link
+            style={{ placeSelf: "center center", textDecoration: "none" }}
+            to="/gameBoard"
+          >
+            <MenuStartGame>Game Start</MenuStartGame>
+          </Link>
+        </MenuButtons>
+        <MenuButtons>
+          <Link
+            style={{ placeSelf: "center center", textDecoration: "none" }}
+            to="/ruldOfGame"
+          >
+            <MenuRoluOfGame>How to play</MenuRoluOfGame>
+          </Link>
+          <Link
+            style={{ placeSelf: "center center", textDecoration: "none" }}
+            to="/setDifficulty"
+          >
+            <MenuSetDifficulty>Set Game Level</MenuSetDifficulty>
+          </Link>
+        </MenuButtons>
+      </HomeContents>
     </HomeWrap>
   );
 };

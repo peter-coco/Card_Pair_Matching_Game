@@ -13,7 +13,7 @@ import SetDifficulty from "./SetDifficulty";
 const BackgroundWrap = styled.div`
   width: 100vw;
   height: 100vh;
-  background: #eaf2f7;
+  background: #fff8ee;
   display: flex;
   justify-content: center;
   align-items: center;

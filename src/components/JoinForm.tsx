@@ -3,107 +3,140 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const JoinFormWrap = styled.div`
-  width: 530px;
-  height: 320px;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
-  left: -60px;
-  gap: 20px;
-  justify-content: center;
-  & div {
-    font-size: 30px;
-    color: #fff;
-  }
+  align-items: center;
+  padding: 50px 0;
+
+  box-sizing: border-box;
 `;
-const JoinTitleWrap = styled.div`
-  display: flex;
-  width: 100%;
-  height: 51px;
-`;
+
 const JoinTitle = styled.div`
-  width: 60%;
-  height: 100%;
+  width: 100%;
+  height: 82px;
   text-align: center;
+  line-height: 82px;
+  color: #ffffff;
+  font-size: 48px;
+  background-color: #bcaf9b;
+  margin-bottom: 100px;
 `;
 const JoinIdWrap = styled.div`
   display: flex;
-  width: 100%;
+  width: 80%;
   height: 51px;
+  margin-bottom: 20px;
 `;
 const JoinIdTitle = styled.div`
-  width: 40%;
+  width: 20%;
   height: 51px;
-  text-align: center;
+  /* text-align: center; */
+  line-height: 51px;
+  color: #ffffff;
+  font-size: 30px;
 `;
 const JoinIdInput = styled.div`
-  width: 60%;
+  width: 80%;
   height: 100%;
   background-color: #c4c4c4;
+  padding: 2px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  border: 1px solid #ffffff;
 `;
 const JoinPWWrap = styled.div`
   display: flex;
-  width: 100%;
+  width: 80%;
   height: 51px;
+  margin-bottom: 40px;
 `;
 const JoinPWTitle = styled.div`
-  width: 40%;
+  width: 20%;
   height: 51px;
-  text-align: center;
+  /* text-align: center; */
+  line-height: 51px;
+  color: #ffffff;
+  font-size: 30px;
 `;
-const JoinPWInput = styled.div`
-  width: 60%;
+const JoinPWInput = styled.input`
+  width: 80%;
   height: 100%;
   background-color: #c4c4c4;
+  padding: 2px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  border: 1px solid #ffffff;
 `;
 const JoinBtnsWrap = styled.div`
   display: flex;
-  width: 100%;
+  width: 80%;
   height: 51px;
 `;
-const JoinBtn = styled.div``;
+const JoinBtn = styled.div`
+  width: 45%;
+  height: 100%;
+  background-color: #c4c4c4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  color: #000000;
+  font-weight: 600;
+`;
+const Link2JoinBtn = styled.div``;
 const JoinBtns = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 60%;
+  width: 100%;
   height: 100%;
-
-  & div {
-    width: 100%;
-    height: 100%;
-    background-color: #c4c4c4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 25px;
-    color: #000000;
-    font-weight: 600;
-  }
 `;
-const JoinEmpty = styled.div`
-  width: 40%;
-  height: 51px;
+
+const JoinLogoWrap = styled.div`
+  width: 382px;
+  height: 184px;
+`;
+const JoinLogoImg = styled.img`
+  width: 100%;
+  height: 100%;
 `;
 
 const JoinForm = () => {
   return (
     <JoinFormWrap>
-      <JoinTitleWrap>
-        <JoinEmpty />
-        <JoinTitle>회원가입</JoinTitle>
-      </JoinTitleWrap>
+      <JoinLogoWrap>
+        <JoinLogoImg />
+      </JoinLogoWrap>
+      <JoinTitle>Sign In</JoinTitle>
       <JoinIdWrap>
-        <JoinIdTitle>아이디</JoinIdTitle>
+        <JoinIdTitle>ID</JoinIdTitle>
         <JoinIdInput></JoinIdInput>
       </JoinIdWrap>
       <JoinPWWrap>
-        <JoinPWTitle>비밀번호</JoinPWTitle>
+        <JoinPWTitle>PW</JoinPWTitle>
         <JoinPWInput></JoinPWInput>
       </JoinPWWrap>
       <JoinBtnsWrap>
-        <JoinEmpty />
         <JoinBtns>
-          <JoinBtn>가입하기</JoinBtn>
+          <Link
+            to="/join"
+            style={{
+              textDecoration: "none",
+              width: "100%",
+              height: "100%",
+              backgroundColor: "#c4c4c4",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              fontSize: "25px",
+              color: "#000000",
+              fontWeight: "bold",
+            }}
+          >
+            <Link2JoinBtn>Sign in</Link2JoinBtn>
+          </Link>
         </JoinBtns>
       </JoinBtnsWrap>
     </JoinFormWrap>
