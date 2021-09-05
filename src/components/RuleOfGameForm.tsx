@@ -58,6 +58,7 @@ const RuleOfGameFormExplan = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 23px;
 `;
 
 const RuleOfGameForm = () => {

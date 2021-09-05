@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import { Route } from "react-router-dom";
 
-import GameBoard from "./GameBoard";
+import GameBoard from "./GameBoard/GameBoard";
 import Home from "./Home";
 import Join from "./Join";
 import Login from "./Login";
