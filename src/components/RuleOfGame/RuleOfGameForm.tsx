@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import HowToPlayLogo from "../images/HowToPlayLogo.png";
+import HowToPlayLogo from "../../images/HowToPlayLogo.png";
 
 const RuleOfGameFormWrap = styled.div`
   display: flex;

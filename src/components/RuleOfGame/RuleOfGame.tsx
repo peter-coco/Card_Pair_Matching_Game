@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import CancleBtnCircle from "./CancleBtnCircle";
+import CancleBtnCircle from "../CancleBtnCircle";
 import RuleOfGameForm from "./RuleOfGameForm";
 
 const RuleOfGameWrap = styled.div`

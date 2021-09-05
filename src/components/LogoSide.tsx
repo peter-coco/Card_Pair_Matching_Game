@@ -10,10 +10,9 @@ const LogoSideWrap = styled.div`
   align-items: center;
   gap: 20px;
 `;
-const LogoSideCurrent = styled.div`
-  width: 200px;
-  height: 200px;
-`;
+
+const LogoSideCurrent = styled.div``;
+
 const LogoSideImg = styled.img`
   width: 100%;
   height: 100%;
@@ -33,7 +32,9 @@ const LogoSide = ({
 }) => {
   return (
     <LogoSideWrap>
-      <LogoSideCurrent>
+      <LogoSideCurrent
+        style={{ width: `${curLogoWidth}px`, height: `${curLogoHeight}px` }}
+      >
         <LogoSideImg src={currentPageLogo} />
       </LogoSideCurrent>
       <LogoSideSubLogo>

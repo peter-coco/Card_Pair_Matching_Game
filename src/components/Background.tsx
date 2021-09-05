@@ -5,10 +5,10 @@ import { Route } from "react-router-dom";
 
 import GameBoard from "./GameBoard/GameBoard";
 import Home from "./Home";
-import Join from "./Join";
-import Login from "./Login";
-import RuleOfGame from "./RuleOfGame";
-import SetDifficulty from "./SetDifficulty";
+import Join from "./Join/Join";
+import Login from "./Login/Login";
+import RuleOfGame from "./RuleOfGame/RuleOfGame";
+import SetDifficulty from "./SetDifficulty/SetDifficulty";
 
 const BackgroundWrap = styled.div`
   width: 100vw;
