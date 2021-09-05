@@ -10,7 +10,6 @@ const SetDifficultyFormWrap = styled.div`
   position: relative;
   align-items: center;
   padding: 100px 0;
-
   box-sizing: border-box;
 `;
 
@@ -24,22 +23,21 @@ const SetDifficultyTitle = styled.div`
   background-color: #bcaf9b;
   margin-bottom: 100px;
 `;
-const SetDifficultyIdWrap = styled.div`
+const SetDifficultyOptionWrap = styled.div`
   display: flex;
   width: 80%;
   height: 51px;
   margin-bottom: 20px;
 `;
-const SetDifficultyIdTitle = styled.div`
-  width: 20%;
+const SetDifficultyOptionTitle = styled.div`
+  width: 50%;
   height: 51px;
-  /* text-align: center; */
   line-height: 51px;
   color: #ffffff;
-  font-size: 30px;
+  font-size: 20px;
 `;
-const SetDifficultyIdInput = styled.div`
-  width: 80%;
+const SetDifficultyOption = styled.div`
+  width: 50%;
   height: 100%;
   background-color: #c4c4c4;
   padding: 2px;
@@ -47,36 +45,9 @@ const SetDifficultyIdInput = styled.div`
   border-radius: 20px;
   border: 1px solid #ffffff;
 `;
-const SetDifficultyPWWrap = styled.div`
-  display: flex;
-  width: 80%;
-  height: 51px;
-  margin-bottom: 40px;
-`;
-const SetDifficultyPWTitle = styled.div`
-  width: 20%;
-  height: 51px;
-  /* text-align: center; */
-  line-height: 51px;
-  color: #ffffff;
-  font-size: 30px;
-`;
-const SetDifficultyPWInput = styled.input`
-  width: 80%;
-  height: 100%;
-  background-color: #c4c4c4;
-  padding: 2px;
-  box-sizing: border-box;
-  border-radius: 20px;
-  border: 1px solid #ffffff;
-`;
-const SetDifficultyBtnsWrap = styled.div`
-  display: flex;
-  width: 80%;
-  height: 51px;
-`;
+
 const SetDifficultyBtn = styled.div`
-  width: 45%;
+  /* width: 45%;
   height: 100%;
   background-color: #c4c4c4;
   display: flex;
@@ -84,54 +55,113 @@ const SetDifficultyBtn = styled.div`
   align-items: center;
   font-size: 25px;
   color: #000000;
-  font-weight: 600;
+  font-weight: 600; */
 `;
-const Link2JoinBtn = styled.div``;
-const SetDifficultyBtns = styled.div`
+const SetDifficultyBtnsWrap = styled.div`
+  display: flex;
+  width: 100%;
+  height: 51px;
+
+  justify-content: space-between;
+
+  & > SetDifficultyBtn {
+    width: 45%;
+    height: 50px;
+    background-color: #c4c4c4;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    align-items: center;
+    color: #ffffff;
+    /* text-decoration: none; */
+  }
+`;
+
+const SetDifficultyWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 200px;
+`;
+const SetDifficultySubTitleWrap = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+`;
+const SetDifficultySubTitleBar = styled.div`
+  width: 30%;
+  height: 2px;
+  background-color: #c4c4c4;
+`;
+const SetDifficultySubTitle = styled.div`
+  width: 30%;
+  height: 100%;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+const SetDifficultySubOptionWrap = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
+  height: 100px;
+  margin-bottom: 30px;
+`;
+const SetDifficultySubOption = styled.div`
+  width: 30%;
   height: 100%;
+  background-color: #c4c4c4;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const SetDifficultyForm = () => {
   return (
     <SetDifficultyFormWrap>
       <SetDifficultyTitle>LEVEL SECTION</SetDifficultyTitle>
-      <SetDifficultyIdWrap>
-        <SetDifficultyIdTitle>TIME LIMIT</SetDifficultyIdTitle>
-        <SetDifficultyIdInput></SetDifficultyIdInput>
-      </SetDifficultyIdWrap>
-      <SetDifficultyPWWrap>
-        <SetDifficultyPWTitle>CLICK COUNT</SetDifficultyPWTitle>
-        <SetDifficultyPWInput></SetDifficultyPWInput>
-      </SetDifficultyPWWrap>
-      <SetDifficultyPWWrap>
-        <SetDifficultyPWTitle>REMAIN CARD</SetDifficultyPWTitle>
-        <SetDifficultyPWInput></SetDifficultyPWInput>
-      </SetDifficultyPWWrap>
-      <SetDifficultyBtnsWrap>
-        <SetDifficultyBtns>
-          <SetDifficultyBtn>SetDifficulty</SetDifficultyBtn>
+      <SetDifficultyOptionWrap>
+        <SetDifficultyOptionTitle>TIME LIMIT</SetDifficultyOptionTitle>
+        <SetDifficultyOption></SetDifficultyOption>
+      </SetDifficultyOptionWrap>
+      <SetDifficultyOptionWrap>
+        <SetDifficultyOptionTitle>CLICK COUNT LIMIT</SetDifficultyOptionTitle>
+        <SetDifficultyOption></SetDifficultyOption>
+      </SetDifficultyOptionWrap>
+      <SetDifficultyWrap>
+        <SetDifficultySubTitleWrap>
+          <SetDifficultySubTitleBar />
+          <SetDifficultySubTitle>LEVEL</SetDifficultySubTitle>
+          <SetDifficultySubTitleBar />
+        </SetDifficultySubTitleWrap>
+        <SetDifficultySubOptionWrap>
+          <SetDifficultySubOption>쉬움</SetDifficultySubOption>
+          <SetDifficultySubOption>보통</SetDifficultySubOption>
+          <SetDifficultySubOption>어려움</SetDifficultySubOption>
+        </SetDifficultySubOptionWrap>
+        <SetDifficultyBtnsWrap>
           <Link
-            to="/join"
+            to="/"
             style={{
               textDecoration: "none",
-              width: "45%",
-              height: "100%",
-              backgroundColor: "#c4c4c4",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              fontSize: "25px",
-              color: "#000000",
-              fontWeight: "bold",
             }}
           >
-            <Link2JoinBtn>Join</Link2JoinBtn>
+            <SetDifficultyBtn>확인</SetDifficultyBtn>
           </Link>
-        </SetDifficultyBtns>
-      </SetDifficultyBtnsWrap>
+          <Link
+            to="/"
+            style={{
+              textDecoration: "none",
+            }}
+          >
+            <SetDifficultyBtn>취소</SetDifficultyBtn>
+          </Link>
+        </SetDifficultyBtnsWrap>
+      </SetDifficultyWrap>
     </SetDifficultyFormWrap>
   );
 };
