@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import JoinSubLogo from "../images/subLogo.png";
 
 const JoinFormWrap = styled.div`
   width: 100%;
@@ -107,7 +108,7 @@ const JoinForm = () => {
   return (
     <JoinFormWrap>
       <JoinLogoWrap>
-        <JoinLogoImg />
+        <JoinLogoImg src={JoinSubLogo} />
       </JoinLogoWrap>
       <JoinTitle>Sign In</JoinTitle>
       <JoinIdWrap>

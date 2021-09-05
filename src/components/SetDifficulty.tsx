@@ -6,6 +6,9 @@ import { Link } from "react-router-dom";
 import SetDifficultyForm from "./SetDifficultyForm";
 import CancleBtnCircle from "./CancleBtnCircle";
 
+import LevelLogo from "../images/LevelSectionLogo.png";
+import GameTitleLogo from "../images/GameLogoTitle.png";
+
 const SetDifficultyWrap = styled.div`
   width: 100%;
   height: 100%;
@@ -20,6 +23,7 @@ const SetDifficultyLeftWrap = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 20px;
 `;
 const SetDifficultyLogoWrap = styled.div`
   width: 200px;
@@ -31,12 +35,8 @@ const SetDifficultyLogoImg = styled.img`
 `;
 
 const SetDifficultyTitleWrap = styled.div`
-  width: 100%;
-  height: 84px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  width: 300px;
+  height: 100px;
 `;
 const SetDifficultyTitle = styled.div``;
 const SetDifficultyTitleUnderBar = styled.div`
@@ -59,11 +59,10 @@ const SetDifficulty = () => {
     <SetDifficultyWrap>
       <SetDifficultyLeftWrap>
         <SetDifficultyLogoWrap>
-          <SetDifficultyLogoImg />
+          <SetDifficultyLogoImg src={LevelLogo} />
         </SetDifficultyLogoWrap>
         <SetDifficultyTitleWrap>
-          <SetDifficultyTitle>COCO MEOW</SetDifficultyTitle>
-          <SetDifficultyTitleUnderBar />
+          <SetDifficultyLogoImg src={GameTitleLogo} />
         </SetDifficultyTitleWrap>
       </SetDifficultyLeftWrap>
       <SetDifficultyRightWrap>

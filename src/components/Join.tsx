@@ -6,6 +6,9 @@ import { Link } from "react-router-dom";
 import JoinForm from "./JoinForm";
 import CancleBtnCircle from "./CancleBtnCircle";
 
+import JoinLogo from "../images/JoinLogo.png";
+import GameTitleLogo from "../images/GameLogoTitle.png";
+
 const JoinWrap = styled.div`
   width: 100%;
   height: 100%;
@@ -59,11 +62,10 @@ const Join = () => {
     <JoinWrap>
       <JoinLeftWrap>
         <JoinLogoWrap>
-          <JoinLogoImg />
+          <JoinLogoImg src={JoinLogo} />
         </JoinLogoWrap>
         <JoinTitleWrap>
-          <JoinTitle>COCO MEOW</JoinTitle>
-          <JoinTitleUnderBar />
+          <SetDifficultyLogoImg src={GameTitleLogo} />
         </JoinTitleWrap>
       </JoinLeftWrap>
       <JoinRightWrap>

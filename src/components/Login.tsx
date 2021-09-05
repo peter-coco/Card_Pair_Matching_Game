@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 import LoginForm from "./LoginForm";
 import CancleBtnCircle from "./CancleBtnCircle";
+import LoginLogo from "../images/LoginLogo.png";
 
 const LoginWrap = styled.div`
   width: 100%;
@@ -59,7 +60,7 @@ const Login = () => {
     <LoginWrap>
       <LoginLeftWrap>
         <LoginLogoWrap>
-          <LoginLogoImg />
+          <LoginLogoImg src={LoginLogo} />
         </LoginLogoWrap>
         <LoginTitleWrap>
           <LoginTitle>COCO MEOW</LoginTitle>

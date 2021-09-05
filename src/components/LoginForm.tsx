@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+import LoginSubLogo from "../images/subLogo.png";
+
 const LoginFormWrap = styled.div`
   width: 100%;
   height: 100%;
@@ -107,9 +109,9 @@ const LoginForm = () => {
   return (
     <LoginFormWrap>
       <LoginLogoWrap>
-        <LoginLogoImg />
+        <LoginLogoImg src={LoginSubLogo} />
       </LoginLogoWrap>
-      <LoginTitle>로그인</LoginTitle>
+      <LoginTitle>Login</LoginTitle>
       <LoginIdWrap>
         <LoginIdTitle>ID</LoginIdTitle>
         <LoginIdInput></LoginIdInput>

@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+import mainLogo from "../images/GameLogo.png";
+
 const HomeWrap = styled.div`
   width: 705px;
   height: 100%;
@@ -22,7 +24,7 @@ const HomeContents = styled.div`
   width: 100%;
   height: 100%;
 
-  padding: 20px 100px;
+  padding: 20px 125px;
   box-sizing: border-box;
   border: 2px solid #ffffff;
 
@@ -87,7 +89,7 @@ const Home = () => {
     <HomeWrap>
       <HomeContents>
         <HomeIconWrap>
-          <HomeIcon />
+          <HomeIcon src={mainLogo} />
         </HomeIconWrap>
         <MenuTitleWrap>
           <MenuTitle>COCO MEOW</MenuTitle>

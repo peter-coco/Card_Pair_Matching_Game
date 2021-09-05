@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import HowToPlayLogo from "../images/HowToPlayLogo.png";
+
 const RuleOfGameFormWrap = styled.div`
   display: flex;
   flex-direction: column;
@@ -32,7 +34,7 @@ const RuleOfGameFormTitle = styled.div`
   left: -60px;
 `;
 const RuleOfGameFormLogoWrap = styled.div`
-  width: 140px;
+  width: 120px;
   height: 200px;
   position: relative;
   left: -60px;
@@ -67,7 +69,7 @@ const RuleOfGameForm = () => {
       <RuleOfGameFormTop>
         <RuleOfGameFormTitleWrap>
           <RuleOfGameFormLogoWrap>
-            <RuleOfGameFormLogo />
+            <RuleOfGameFormLogo src={HowToPlayLogo} />
           </RuleOfGameFormLogoWrap>
           <RuleOfGameFormTitle>HOW TO PLAY</RuleOfGameFormTitle>
         </RuleOfGameFormTitleWrap>
