@@ -64,7 +64,7 @@ const SetDifficultyBtnsWrap = styled.div`
 
   justify-content: space-between;
 
-  & > SetDifficultyBtn {
+  & div {
     width: 45%;
     height: 50px;
     background-color: #c4c4c4;
@@ -139,27 +139,53 @@ const SetDifficultyForm = () => {
           <SetDifficultySubTitleBar />
         </SetDifficultySubTitleWrap>
         <SetDifficultySubOptionWrap>
-          <SetDifficultySubOption>쉬움</SetDifficultySubOption>
-          <SetDifficultySubOption>보통</SetDifficultySubOption>
-          <SetDifficultySubOption>어려움</SetDifficultySubOption>
+          <SetDifficultySubOption style={{ color: "#308413" }}>
+            쉬움
+          </SetDifficultySubOption>
+          <SetDifficultySubOption style={{ color: "#283390" }}>
+            보통
+          </SetDifficultySubOption>
+          <SetDifficultySubOption style={{ color: "#9D1010" }}>
+            어려움
+          </SetDifficultySubOption>
         </SetDifficultySubOptionWrap>
         <SetDifficultyBtnsWrap>
-          <Link
-            to="/"
-            style={{
-              textDecoration: "none",
-            }}
-          >
-            <SetDifficultyBtn>확인</SetDifficultyBtn>
-          </Link>
-          <Link
-            to="/"
-            style={{
-              textDecoration: "none",
-            }}
-          >
-            <SetDifficultyBtn>취소</SetDifficultyBtn>
-          </Link>
+          <SetDifficultyBtn>
+            <Link
+              to="/"
+              style={{
+                textDecoration: "none",
+                width: "100%",
+                height: "100%",
+                placeSelf: "center center",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                // textDecorationColor: "none",
+                color: "black",
+              }}
+            >
+              확인{" "}
+            </Link>
+          </SetDifficultyBtn>
+
+          <SetDifficultyBtn>
+            <Link
+              to="/"
+              style={{
+                textDecoration: "none",
+                width: "100%",
+                height: "100%",
+                placeSelf: "center center",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                color: "black",
+              }}
+            >
+              취소
+            </Link>
+          </SetDifficultyBtn>
         </SetDifficultyBtnsWrap>
       </SetDifficultyWrap>
     </SetDifficultyFormWrap>
