@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const GameBoardCardWrap = styled.div`
   width: 100%;
-  height: 50%;
+  /* height: 100%; */
 `;
 
 const Card = styled.img`
